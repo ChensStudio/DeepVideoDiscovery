@@ -50,7 +50,7 @@ def main():
         # Download video
         if not os.path.exists(video_path):
             print(f"Downloading video from {video_url} to {video_path}...")
-            load_video(video_url, video_path)
+            load_video(video_url)
             print("Video downloaded.")
         else:
             print(f"Video already exists at {video_path}.")

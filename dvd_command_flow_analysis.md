@@ -43,20 +43,21 @@ video_database/
 
 ## 2. 运行模式判断
 
-### 2.1 轻量模式 (LITE_MODE=True)
-当前配置启用轻量模式，特点：
+### 2.1 完整模式 (LITE_MODE=False)
+当前配置启用完整模式，特点：
+- ✅ 视频下载 (360p分辨率)
+- ✅ 帧提取 (2fps)
+- ✅ 视觉标注 (GPT-4.1-mini)
+- ✅ 主体识别与注册
+- ✅ 多模态内容分析
+
+### 2.2 轻量模式 (LITE_MODE=True)
+轻量模式包含：
 - ✅ 仅下载字幕文件
 - ✅ 基于文本内容分析
 - ❌ 不下载视频文件
 - ❌ 不提取视频帧
 - ❌ 不进行视觉分析
-
-### 2.2 完整模式 (LITE_MODE=False)
-完整模式包含：
-- 视频下载 (360p分辨率)
-- 帧提取 (2fps)
-- 视觉标注 (GPT-4.1-mini)
-- 主体识别与注册
 
 ## 3. 内容获取阶段
 
@@ -266,7 +267,7 @@ AOAI_EMBEDDING_LARGE_MODEL_NAME = "text-embedding-3-large"
 AOAI_EMBEDDING_LARGE_DIM = 3072
 
 # 代理设置
-LITE_MODE = True           # 轻量模式
+LITE_MODE = False          # 轻量模式(当前设为False)
 MAX_ITERATIONS = 3         # 最大迭代次数
 GLOBAL_BROWSE_TOPK = 300   # 全局浏览返回条目数
 ```

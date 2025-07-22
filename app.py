@@ -53,7 +53,7 @@ def _prepare_video_assets(video_url: str):
         caption_file = os.path.join(captions_dir, "captions.json")
     else:
         if not os.path.exists(video_path):
-            load_video(video_url, video_path)
+            load_video(video_url)
         if not os.path.exists(frames_dir) or not os.listdir(frames_dir):
             decode_video_to_frames(video_path)
         caption_file = os.path.join(captions_dir, "captions.json")
