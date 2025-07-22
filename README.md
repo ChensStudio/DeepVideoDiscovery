@@ -67,7 +67,7 @@ Note: Set up your configuration by updating the variables in  `config.py`.
 The `local_run.py` script provides an example of how to run the Deep Video Discovery agent by providing a youtube url and question about it.
 
     ```bash
-    python local_run.py https://www.youtube.com/watch?v=ktbGziZlt3c "how many animals appear in this video"
+    python local_run.py https://youtu.be/d2jPd-JPg6g "how many animals appear in this video"
     ```
 
 ## TODO
